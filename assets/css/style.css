@@ -1095,3 +1095,41 @@ section {
   margin-right: auto;
 }
 
+.m-more-less-content {
+  span {
+    display: inline;
+  }
+  .m-show-more, .m-show-less {
+    color: blue;
+    cursor: pointer;
+    font-style: italic;
+  }
+  .m-show-more {
+    &:before{
+      content: " ... more";
+    }
+  }
+  .m-more-text {
+    overflow: hidden;
+    display: none;
+  }
+  .m-show-less {
+    display: none;
+    
+    &:before{
+      content: " less";
+    }
+  }
+  &.m-display-more {
+    .m-show-more {
+      display: none;
+    }
+    .m-more-text {
+      display: inline;
+    }
+    .m-show-less {
+      display: inline;
+    }
+  }
+
+}
