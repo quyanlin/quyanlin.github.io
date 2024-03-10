@@ -1100,7 +1100,7 @@ section {
     display: inline;
   }
   .m-show-more, .m-show-less {
-    color: navy;
+    color: midnightblue;
     cursor: pointer;
     font-style: italic;
   }
