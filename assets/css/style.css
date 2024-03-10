@@ -1106,7 +1106,7 @@ section {
   }
   .m-show-more {
     &:before{
-      content: " ... more";
+      content: " ...more";
     }
   }
   .m-more-text {
@@ -1117,7 +1117,7 @@ section {
     display: none;
     
     &:before{
-      content: " less";
+      content: "Show less";
     }
   }
   &.m-display-more {
