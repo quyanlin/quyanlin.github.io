@@ -1,0 +1,137 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+.footer {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-size: 14px;
+  position: relative;
+
+  .footer-top {
+    background-color: color-mix(in srgb, var(--background-color), white 5%);
+    padding-top: 50px;
+  }
+
+  .footer-about {
+    .logo {
+      line-height: 1;
+      margin-bottom: 25px;
+
+      img {
+        max-height: 40px;
+        margin-right: 6px;
+      }
+
+      span {
+        color: var(--heading-color);
+        font-family: var(--heading-font);
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      font-family: var(--heading-font);
+    }
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--accent-color);
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .footer-links {
+    margin-bottom: 30px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      i {
+        padding-right: 2px;
+        font-size: 12px;
+        line-height: 0;
+      }
+
+      li {
+        padding: 10px 0;
+
+        &:first-child {
+          padding-top: 0;
+        }
+
+        display: flex;
+        align-items: center;
+      }
+
+      a {
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        display: inline-block;
+        line-height: 1;
+
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
+    }
+  }
+
+  .footer-contact {
+    p {
+      margin-bottom: 5px;
+    }
+  }
+
+  .copyright {
+    padding: 30px 0;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .credits {
+    margin-top: 5px;
+    font-size: 13px;
+  }
+
+  .social-links {
+    a {
+      font-size: 18px;
+      display: inline-block;
+      background: color-mix(in srgb, var(--default-color), transparent 90%);
+      color: var(--contrast-color);
+      line-height: 1;
+      padding: 8px 0;
+      margin-right: 4px;
+      border-radius: 4px;
+      text-align: center;
+      width: 36px;
+      height: 36px;
+      transition: 0.3s;
+
+      &:hover {
+        background: var(--accent-color);
+        text-decoration: none;
+      }
+    }
+  }
+}

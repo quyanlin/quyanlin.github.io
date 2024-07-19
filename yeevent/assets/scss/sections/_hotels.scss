@@ -1,0 +1,62 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Hotels Section
+--------------------------------------------------------------*/
+.hotels {
+  .card {
+    background-color: var(--surface-color);
+    color: var(--default-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+    position: relative;
+    border-radius: 0;
+
+    .card-img {
+      overflow: hidden;
+      margin-bottom: 15px;
+      border-radius: 0;
+
+      img {
+        transition: 0.3s ease-in-out;
+      }
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 20px;
+      margin-bottom: 5px;
+      padding: 0 20px;
+    }
+
+    a {
+      color: var(--heading-color);
+      transition: 0.3;
+
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+
+    .stars {
+      padding: 0 20px;
+      margin-bottom: 5px;
+
+      i {
+        color: #ffc107;
+      }
+    }
+
+    p {
+      padding: 0 20px;
+      margin-bottom: 20px;
+      color: color-mix(in srgb, var(--default-color), transparent 40%);
+      font-style: italic;
+      font-size: 15px;
+    }
+
+    &:hover {
+      .card-img img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

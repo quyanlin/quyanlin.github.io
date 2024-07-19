@@ -1,0 +1,71 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Speakers Section
+--------------------------------------------------------------*/
+.speakers {
+  --default-color: #ffffff;
+
+  .member {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    .member-info {
+      position: absolute;
+      padding: 15px 0;
+      inset: auto 0 -44px 0;
+      background: rgba(0, 0, 0, .6);
+      transition: 0.4s;
+    }
+
+    .member-info-content {
+      h4 {
+        color: var(--contrast-color);
+        font-weight: 700;
+        margin-bottom: 4px;
+        font-size: 16px;
+
+        a {
+          color: var(--contrast-color);
+
+          &:hover {
+            color: var(--accent-color);
+          }
+        }
+      }
+
+      span {
+        font-style: italic;
+        display: block;
+        font-size: 13px;
+      }
+    }
+
+    .social {
+      text-align: center;
+      padding-top: 10px;
+
+      a {
+        transition: color 0.3s;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        margin: 0 4px;
+        display: inline-block;
+
+        &:hover {
+          color: var(--default-color);
+        }
+      }
+
+      i {
+        font-size: 18px;
+        margin: 0 2px;
+      }
+    }
+
+    &:hover {
+      .member-info {
+        bottom: 0;
+      }
+    }
+  }
+}
