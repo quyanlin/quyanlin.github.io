@@ -33,6 +33,7 @@
 </head>
 
 <body>
+<div id="preloader"></div>
 
   <!-- ======= Mobile nav toggle button ======= -->
   <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
@@ -275,6 +276,18 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+
+
+  <script>
+    
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load",function(){
+      loader.style.display = "none";
+    })
+
+
+
+  </script>
 </body>
 
 </html>
