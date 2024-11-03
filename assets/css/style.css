@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 
 #preloader {
-  background: #000 url("../img/pink.gif") no-repeat center center;
+  background: #000 url("../img/pink.gif") center center;
   height: 100vh;
   width: 100%;
   position: fixed;
