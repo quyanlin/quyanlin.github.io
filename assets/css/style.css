@@ -1102,6 +1102,7 @@ section {
 .full-width {
   width: 100%;
   display:block;
+  margin-bottom: -5px;
 }
 
 .smaller {
@@ -1150,14 +1151,3 @@ section {
 
 }
 
-#vAlign img {
-  vertical-align :bottom;
-}
-#block img{
-  display:block;
-  margin-bottom: -5px;
-}
-
-.image-container {
-    line-height: 0;
-}
