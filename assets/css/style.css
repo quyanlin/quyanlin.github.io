@@ -1155,3 +1155,7 @@ section {
 #block img{
   display:block;
 }
+
+.image-container {
+    line-height: 0;
+}
