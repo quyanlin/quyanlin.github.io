@@ -1148,3 +1148,7 @@ section {
   }
 
 }
+
+img {
+    vertical-align: bottom;
+}
