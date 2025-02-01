@@ -1155,6 +1155,7 @@ section {
 }
 #block img{
   display:block;
+  margin-bottom: -5px;
 }
 
 .image-container {
