@@ -28,6 +28,7 @@ img { display: block; max-width: 100%; }
 h1, h2, h3, p, figure { margin: 0; }
 h1, h2, h3 { line-height: 1.2; }
 button { color: inherit; }
+.arrow-icon { display: inline-block; width: 1em; max-width: 100%; height: 1em; fill: none; stroke: currentColor; stroke-width: 1.2; stroke-linecap: square; stroke-linejoin: miter; vertical-align: -.1em; }
 .skip-link { position: fixed; z-index: 120; left: 16px; top: 16px; padding: 10px 20px; background: var(--text); color: var(--background); transform: translateY(-180%); }
 .skip-link:focus { transform: translateY(0); }
 
