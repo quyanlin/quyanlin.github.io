@@ -5,6 +5,27 @@
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const introPreview = root.classList.contains('is-intro-preview');
 
+  // Match line widths through font size, preserving the font's natural proportions.
+  const heroTitle = document.getElementById('hero-title');
+  const heroSubtitle = document.querySelector('.hero-subtitle');
+  const heroSubtitleText = document.querySelector('.hero-subtitle-text');
+  if (heroTitle && heroSubtitle && heroSubtitleText) {
+    const fitHeroSubtitle = () => {
+      const titleWidth = heroTitle.getBoundingClientRect().width;
+      const textWidth = heroSubtitleText.getBoundingClientRect().width;
+      if (titleWidth <= 0 || textWidth <= 0 || Math.abs(titleWidth - textWidth) < 0.25) return;
+      const fontSize = parseFloat(window.getComputedStyle(heroSubtitle).fontSize);
+      heroSubtitle.style.setProperty('--hero-subtitle-size', `${fontSize * titleWidth / textWidth}px`);
+    };
+    fitHeroSubtitle();
+    if ('ResizeObserver' in window) {
+      new ResizeObserver(fitHeroSubtitle).observe(heroTitle);
+    } else {
+      window.addEventListener('resize', fitHeroSubtitle, { passive: true });
+    }
+    if (document.fonts) document.fonts.ready.then(fitHeroSubtitle);
+  }
+
   // Only the cover image can hold the introduction open; slow assets never do.
   const heroImage = document.getElementById('hero-image');
   let introFinished = false;
